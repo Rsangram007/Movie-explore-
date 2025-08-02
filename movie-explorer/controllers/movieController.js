@@ -2,6 +2,10 @@ const axios = require("axios");
 const MovieModel = require("../models/movieModel");
 const { TMDB_API_KEY, TMDB_BASE_URL, fallbackData } = require("../config/tmdb");
 const logger = require("../config/logger");
+// console.log(fallbackData)
+const TMDB_PROXY_URL =
+  "https://thingproxy.freeboard.io/fetch/https://api.themoviedb.org/3";
+const TMDB_BEARER_TOKEN = process.env.TMDB_TOKEN;
 
 async function initializeDatabase(req, res) {
   try {
@@ -20,50 +24,59 @@ async function fetchAndStoreMovies(req, res) {
     let page = 1;
     let totalPages = 1;
 
+    // Fetch paginated movies
     while (movies.length < 500 && page <= totalPages) {
       try {
-        const response = await axios.get(`${TMDB_BASE_URL}/discover/movie`, {
-          params: { api_key: TMDB_API_KEY, page },
+        const { data } = await axios.get(`${TMDB_PROXY_URL}/discover/movie`, {
+          params: { page },
+          headers: {
+            Authorization: TMDB_BEARER_TOKEN,
+            accept: "application/json",
+          },
         });
-        movies = [...movies, ...response.data.results];
-        totalPages = response.data.total_pages;
+        // console.log("data", data);
+        movies.push(...data.results);
+        totalPages = data.total_pages;
         page++;
-      } catch (error) {
-        logger.error("TMDB discover API failed, using fallback", error.message);
-        movies = [...movies, ...fallbackData.discover.results];
+      } catch (err) {
+        console.log(err.message);
+        logger.error("TMDB API failed, using fallback:", err.message);
+        movies.push(...fallbackData.discover.results);
         totalPages = fallbackData.discover.total_pages;
         break;
       }
     }
 
-    // Parallel fetching of movie details and credits
+    // Fetch details and credits in parallel
     const moviePromises = movies.slice(0, 500).map((movie) =>
       Promise.all([
         axios
-          .get(`${TMDB_BASE_URL}/movie/${movie.id}`, {
-            params: { api_key: TMDB_API_KEY },
+          .get(`${TMDB_PROXY_URL}/movie/${movie.id}`, {
+            headers: { Authorization: `Bearer ${TMDB_BEARER_TOKEN}` },
           })
           .catch(() => ({
             data:
               fallbackData.movieDetails.find((m) => m.id === movie.id) || {},
           })),
         axios
-          .get(`${TMDB_BASE_URL}/movie/${movie.id}/credits`, {
-            params: { api_key: TMDB_API_KEY },
+          .get(`${TMDB_PROXY_URL}/movie/${movie.id}/credits`, {
+            headers: { Authorization: `Bearer ${TMDB_BEARER_TOKEN}` },
           })
           .catch(() => ({
             data: fallbackData.credits.find((c) => c.id === movie.id) || {
               cast: [],
             },
           })),
-      ]).then(([detailsResponse, creditsResponse]) => ({
+      ]).then(([details, credits]) => ({
         movie,
-        details: detailsResponse.data,
-        credits: creditsResponse.data,
+        details: details.data,
+        credits: credits.data,
       }))
     );
 
     const results = await Promise.all(moviePromises);
+
+    // Store in DB
     for (const { movie, details, credits } of results) {
       await MovieModel.storeMovieDetails(movie, details, credits);
     }
