@@ -4,8 +4,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +12,6 @@
   "description": "",
   "devDependencies": {
     "axios": "^1.11.0",
-    "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
@@ -21,6 +19,8 @@
     "pg": "^8.16.3"
   },
   "dependencies": {
-    "jsonwebtoken": "^9.0.2"
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "winston": "^3.17.0"
   }
 }
