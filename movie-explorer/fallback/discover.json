@@ -1,0 +1,43 @@
+{
+  "dates": {
+    "maximum": "2025-04-16",
+    "minimum": "2025-03-05"
+  },
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/2Nti3gYAX513wvhp8I1LL6ZDy0m.jpg",
+      "genre_ids": [10751, 35, 12, 14],
+      "id": 950387,
+      "original_language": "en",
+      "original_title": "A Minecraft Movie",
+      "overview": "Four misfits find themselves struggling with ordinary problems when they are suddenly pulled through a mysterious portal into the Overworld: a bizarre, cubic wonderland that thrives on imagination. To get back home, they'll have to master this world while embarking on a magical quest with an unexpected, expert crafter, Steve.",
+      "popularity": 824.7134,
+      "poster_path": "/1PPTGh20XuTv6d7cwuOPkw8govp.jpg",
+      "release_date": "2025-03-31",
+      "title": "A Minecraft Movie",
+      "video": false,
+      "vote_average": 6.1,
+      "vote_count": 482
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/op3qmNhvwEvyT7UFvpTfQmKriB.jpg",
+      "genre_ids": [14, 12, 28],
+      "id": 324544,
+      "original_language": "en",
+      "original_title": "In the Lost Lands",
+      "overview": "A queen sends the powerful and feared sorceress Gray Alys to the ghostly wilderness of the Lost Lands in search of a magical power, where the sorceress and her guide, the drifter Boyce must outwit and outfight man and demon.",
+      "popularity": 873.5678,
+      "poster_path": "/iHF6bXPghWB6gT8kFkL1zo00x6X.jpg",
+      "release_date": "2025-02-27",
+      "title": "In the Lost Lands",
+      "video": false,
+      "vote_average": 5.926,
+      "vote_count": 101
+    }
+  ],
+  "total_pages": 49754,
+  "total_results": 995075
+}

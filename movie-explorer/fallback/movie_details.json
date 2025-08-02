@@ -1,0 +1,133 @@
+[
+  {
+    "adult": false,
+    "backdrop_path": "/2Nt13gYAX513wvhpBIiLLGZDyOm.jpg",
+    "belongs_to_collection": {
+      "id": 1461530,
+      "name": "The Minecraft Movie Collection",
+      "poster_path": "/8jMQ2sVZ1RRiY5pcb7Yommo7V4r.jpg",
+      "backdrop_path": "/48TbIdb60bjLvVhjGW71YNvDN2p.jpg"
+    },
+    "budget": 150000000,
+    "genres": [
+      { "id": 10751, "name": "Family" },
+      { "id": 35, "name": "Comedy" },
+      { "id": 12, "name": "Adventure" },
+      { "id": 14, "name": "Fantasy" }
+    ],
+    "homepage": "https://www.minecraft-movie.com",
+    "id": 950387,
+    "imdb_id": "tt3566834",
+    "origin_country": ["US"],
+    "original_language": "en",
+    "original_title": "A Minecraft Movie",
+    "overview": "Four misfits find themselves struggling with ordinary problems when they are suddenly pulled through a mysterious portal into the Overworld: a bizarre, cubic wonderland that thrives on imagination. To get back home, they'll have to master this world while embarking on a magical quest with an unexpected, expert crafter, Steve.",
+    "popularity": 699.0444,
+    "poster_path": "/yFHHFHcUgGAxz1P1C31Lt0q2T4s.jpg",
+    "production_companies": [
+      {
+        "id": 174,
+        "logo_path": "/zhD3hhtKB5gyv7ZeL4uLpNxgMWU.png",
+        "name": "Warner Bros. Pictures",
+        "origin_country": "US"
+      },
+      {
+        "id": 923,
+        "logo_path": "/5UQsZrfbfg2dYJbx8DxFoTr2BVu.png",
+        "name": "Legendary Pictures",
+        "origin_country": "US"
+      },
+      {
+        "id": 110691,
+        "logo_path": "/i0D9b0veZbValgEFiJjSd0mbb9C.png",
+        "name": "Mojang Studios",
+        "origin_country": "SE"
+      },
+      {
+        "id": 829,
+        "logo_path": "/aXgwCvJSCDbTclkxAYFsT114Dsa.png",
+        "name": "Vertigo Entertainment",
+        "origin_country": "US"
+      },
+      {
+        "id": 159602,
+        "logo_path": "/e3KodIPx0SC6xpzgTBISB4COQcu.png",
+        "name": "On the Roam",
+        "origin_country": "US"
+      },
+      {
+        "id": 216687,
+        "logo_path": "/kKVYqekve0vLk1TgdqJojLjQvtu.png",
+        "name": "Domain Entertainment",
+        "origin_country": "US"
+      }
+    ],
+    "production_countries": [
+      { "iso_3166_1": "SE", "name": "Sweden" },
+      { "iso_3166_1": "US", "name": "United States of America" }
+    ],
+    "release_date": "2025-03-31",
+    "revenue": 552664857,
+    "runtime": 101,
+    "spoken_languages": [
+      { "english_name": "English", "iso_639_1": "en", "name": "English" }
+    ],
+    "status": "Released",
+    "tagline": "Be there and be square.",
+    "title": "A Minecraft Movie",
+    "video": false,
+    "vote_average": 6.08,
+    "vote_count": 528
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/op3qmWhvwEvy17UFyPbIfQmkPib.jpg",
+    "belongs_to_collection": null,
+    "budget": 55000000,
+    "genres": [
+      { "id": 14, "name": "Fantasy" },
+      { "id": 12, "name": "Adventure" },
+      { "id": 28, "name": "Action" }
+    ],
+    "homepage": "https://inthelostlands.com",
+    "id": 324544,
+    "imdb_id": "tt4419684",
+    "origin_country": ["DE", "CH"],
+    "original_language": "en",
+    "original_title": "In the Lost Lands",
+    "overview": "A queen sends the powerful and feared sorceress Gray Alys to the ghostly wilderness of the Lost Lands in search of a magical power, where the sorceress and her guide, the drifter Boyce must outwit and outfight man and demon.",
+    "popularity": 789.8905,
+    "poster_path": "/1HfcbXPghWB6gT8kFkL1zo00x6X.jpg",
+    "production_companies": [
+      {
+        "id": 47,
+        "logo_path": "/17Z9ot203N55a3Hrf09knifs2y8.png",
+        "name": "Constantin Film",
+        "origin_country": "DE"
+      },
+      {
+        "id": 187303,
+        "logo_path": "/5CJA1Ej3gJxosjkzz2T7AeLwi5Q.png",
+        "name": "Spark Productions",
+        "origin_country": "CH"
+      }
+    ],
+    "production_countries": [
+      { "iso_3166_1": "DE", "name": "Germany" },
+      { "iso_3166_1": "CH", "name": "Switzerland" }
+    ],
+    "release_date": "2025-02-27",
+    "revenue": 4755330,
+    "runtime": 102,
+    "spoken_languages": [
+      { "english_name": "German", "iso_639_1": "de", "name": "Deutsch" },
+      { "english_name": "English", "iso_639_1": "en", "name": "English" }
+    ],
+    "status": "Released",
+    "tagline": "She seeks the power to free her people.",
+    "title": "In the Lost Lands",
+    "video": false,
+    "vote_average": 6.398,
+    "vote_count": 157
+  }
+]
