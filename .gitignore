@@ -1,4 +1,5 @@
 node_modules
-/.env
-/combined.js
-/error.log
+/movie-explorer/.env
+ 
+/movie-explorer/combined.js
+/movie-explorer/error.log
