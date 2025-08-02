@@ -1,2 +1,4 @@
 node_modules
-.env
+/.env
+/combined.js
+/error.log
